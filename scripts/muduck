@@ -3,10 +3,7 @@
 
 APP="/Applications/Muduck.app"
 if [ ! -d "$APP" ]; then
-  APP="/Users/eminyusifov/Desktop/Programming/Muduck/src-tauri/target/release/bundle/macos/Muduck.app"
-fi
-if [ ! -d "$APP" ]; then
-  echo "Muduck.app not found. Run 'bash scripts/install-mac-app.sh' in the Muduck project first."
+  echo "Muduck.app not found in /Applications. Install it first (see README)."
   exit 1
 fi
 
