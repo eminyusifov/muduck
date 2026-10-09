@@ -1,5 +1,10 @@
 # Muduck
 
+<p>
+  <a href="https://github.com/eminyusifov/muduck/releases/latest/download/Muduck_macOS_arm64.zip"><img alt="Download for macOS" src="https://img.shields.io/badge/Download-macOS%20(Apple%20Silicon)-000000?style=for-the-badge&logo=apple&logoColor=white"></a>
+  <a href="https://github.com/eminyusifov/muduck/releases/latest/download/Muduck_Windows_x64_setup.exe"><img alt="Download for Windows" src="https://img.shields.io/badge/Download-Windows%20(x64)-0078D4?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0wIDBoMTEuNHYxMS40SDB6TTEyLjYgMEgyNHYxMS40SDEyLjZ6TTAgMTIuNmgxMS40VjI0SDB6TTEyLjYgMTIuNkgyNFYyNEgxMi42eiIvPjwvc3ZnPg=="></a>
+</p>
+
 A small, fast Markdown reader and editor for macOS and Windows, made for reading the reports AI tools write: tables, callouts, math, diagrams and code, with live reload while the file is being rewritten.
 
 ## Features
@@ -15,11 +20,11 @@ A small, fast Markdown reader and editor for macOS and Windows, made for reading
 
 ## Download
 
-Get the latest version from [Releases](../../releases).
+Use the buttons at the top (they always point to the latest version), or pick a version on the [Releases](../../releases) page.
 
 ### macOS (Apple Silicon)
 
-1. Download `Muduck_<version>_macOS_arm64.zip`, unzip it and move **Muduck.app** to **Applications**.
+1. Download `Muduck_macOS_arm64.zip` (button above), unzip it and move **Muduck.app** to **Applications**.
 2. The app is not notarized by Apple, so the first launch is blocked. Right-click Muduck.app → **Open** → **Open**. If macOS still refuses, run:
    ```bash
    xattr -cr /Applications/Muduck.app
@@ -30,7 +35,7 @@ Intel Macs are not supported by the prebuilt app yet; build from source instead.
 
 ### Windows (x64)
 
-1. Download `Muduck_<version>_x64-setup.exe` and run it. It installs for the current user (no admin rights needed) and associates `.md` files with Muduck.
+1. Download `Muduck_Windows_x64_setup.exe` (button above) and run it. It installs for the current user (no admin rights needed) and associates `.md` files with Muduck.
 2. The installer is not code-signed, so SmartScreen may warn about an unknown publisher: click **More info** → **Run anyway**.
 3. Muduck needs Microsoft Edge WebView2, which Windows 10/11 already include. If it is missing, the installer downloads it.
 
