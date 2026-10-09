@@ -57,3 +57,9 @@
 - Удалены `src/main`, `dist/main`, `release/` (309 МБ), `tsconfig.main.json`, `electron-builder.json`, `assets/icon.icns`, зависимости `electron` и `electron-builder`, скрипты `start`, `app:dev`, `dist:mac`, `build:main`, тип `window.muduckAPI`.
 - `scripts/muduck` (и копия в `~/.local/bin`) больше не ищет `release/`, запасной путь теперь `src-tauri/target`.
 - `assets/icon.png` и `scripts/generate-icon.py` оставлены: это исходник иконки.
+
+## 2026-10-09: git, GitHub, релиз 1.0.0
+- Репозиторий https://github.com/eminyusifov/muduck, публичный. Автор коммитов — анонимный адрес GitHub.
+- Добавлены README (установка, Gatekeeper и SmartScreen, шорткаты, сборка) и LICENSE (MIT). Скрипты установки больше не завязаны на `/Users/eminyusifov`.
+- Релиз v1.0.0: `Muduck_1.0.0_macOS_arm64.zip`, `Muduck_1.0.0_x64-setup.exe`, `SHA256SUMS.txt`. Собраны из закоммиченного кода; zip проверен на подпись после распаковки и на анонимное скачивание.
+- Не сделано: нотаризация (нужен Apple Developer ID), подпись под Windows, сборка для Intel Mac, проверка на настоящем Windows.
