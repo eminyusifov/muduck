@@ -1,0 +1,32 @@
+[package]
+name = "muduck"
+version = "1.0.0"
+description = "The Lightweight AI Markdown Reader & Editor for macOS"
+edition = "2021"
+
+[lib]
+name = "muduck_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-fs = "2"
+tauri-plugin-opener = "2"
+dunce = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+dirs = "5"
+
+[target.'cfg(any(target_os = "windows", target_os = "linux"))'.dependencies]
+tauri-plugin-single-instance = "2"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

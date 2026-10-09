@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Muduck CLI launcher for macOS: `muduck [file.md]`
+
+APP="/Applications/Muduck.app"
+if [ ! -d "$APP" ]; then
+  APP="/Users/eminyusifov/Desktop/Programming/Muduck/src-tauri/target/release/bundle/macos/Muduck.app"
+fi
+if [ ! -d "$APP" ]; then
+  echo "Muduck.app not found. Run 'bash scripts/install-mac-app.sh' in the Muduck project first."
+  exit 1
+fi
+
+if [ -z "$1" ]; then
+  open -a "$APP"
+else
+  # Resolve absolute path
+  if [ -f "$1" ]; then
+    ABS_PATH="$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
+  else
+    ABS_PATH="$PWD/$1"
+  fi
+  open -a "$APP" "$ABS_PATH"
+fi

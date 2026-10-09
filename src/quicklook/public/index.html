@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src data: https: http:; font-src 'self' data:" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body { overflow: auto; }
+      .ql-page { padding: 2rem 3rem; }
+      .ql-truncated { margin-top: 2rem; font-size: 0.8rem; color: var(--text-muted); }
+    </style>
+  </head>
+  <body class="theme-paper">
+    <div class="ql-page">
+      <div class="mx-auto max-w-3xl font-serif" style="font-size: 1.05rem">
+        <article id="content" class="markdown-body prose prose-slate max-w-none leading-relaxed" style="color: var(--text-main); line-height: 1.75"></article>
+      </div>
+    </div>
+    <script src="preview.js"></script>
+  </body>
+</html>

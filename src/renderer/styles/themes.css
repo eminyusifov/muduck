@@ -1,0 +1,163 @@
+/* Muduck Themes and Typography */
+
+:root {
+  --app-scale: 1;
+}
+
+/* 1. EDITORIAL PAPER (Warm parchment, serif, easy on eyes) */
+.theme-paper {
+  --bg-app: #fbf8f1;
+  --bg-sidebar: #f4eee1;
+  --bg-surface: #ffffff;
+  --bg-surface-subtle: #f6f0e4;
+  --bg-code: #f3ecdf;
+  --text-main: #2c2825;
+  --text-muted: #797166;
+  --border-color: #e6dcce;
+  --accent-color: #b45309;
+  --accent-hover: #92400e;
+  --accent-surface: #fef3c7;
+  --table-border: #ded2c0;
+  --table-stripe: #f8f3e9;
+  --callout-note-bg: #e0f2fe;
+  --callout-note-border: #38bdf8;
+  --callout-tip-bg: #ecfdf5;
+  --callout-tip-border: #34d399;
+  --callout-warning-bg: #fffbeb;
+  --callout-warning-border: #f59e0b;
+  --callout-danger-bg: #fef2f2;
+  --callout-danger-border: #f87171;
+}
+
+/* 2. MODERN LIGHT (Clean crisp minimal white) */
+.theme-light {
+  --bg-app: #ffffff;
+  --bg-sidebar: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-subtle: #f1f5f9;
+  --bg-code: #f1f5f9;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --accent-color: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-surface: #dbeafe;
+  --table-border: #e2e8f0;
+  --table-stripe: #f8fafc;
+  --callout-note-bg: #f0f9ff;
+  --callout-note-border: #0284c7;
+  --callout-tip-bg: #f0fdf4;
+  --callout-tip-border: #16a34a;
+  --callout-warning-bg: #fffbeb;
+  --callout-warning-border: #d97706;
+  --callout-danger-bg: #fef2f2;
+  --callout-danger-border: #dc2626;
+}
+
+/* 3. MIDNIGHT DARK (Deep slate, soothing night reading) */
+.theme-midnight {
+  --bg-app: #0f172a;
+  --bg-sidebar: #0b1120;
+  --bg-surface: #1e293b;
+  --bg-surface-subtle: #192338;
+  --bg-code: #1e293b;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --accent-color: #38bdf8;
+  --accent-hover: #7dd3fc;
+  --accent-surface: #0369a133;
+  --table-border: #334155;
+  --table-stripe: #131d33;
+  --callout-note-bg: #0c4a6e30;
+  --callout-note-border: #38bdf8;
+  --callout-tip-bg: #064e3b30;
+  --callout-tip-border: #34d399;
+  --callout-warning-bg: #78350f30;
+  --callout-warning-border: #fbbf24;
+  --callout-danger-bg: #7f1d1d30;
+  --callout-danger-border: #f87171;
+}
+
+/* 4. NORDIC FROST (Cool arctic slate & frost) */
+.theme-nord {
+  --bg-app: #2e3440;
+  --bg-sidebar: #242933;
+  --bg-surface: #3b4252;
+  --bg-surface-subtle: #333a48;
+  --bg-code: #3b4252;
+  --text-main: #eceff4;
+  --text-muted: #d8dee9;
+  --border-color: #4c566a;
+  --accent-color: #88c0d0;
+  --accent-hover: #81a1c1;
+  --accent-surface: #88c0d026;
+  --table-border: #4c566a;
+  --table-stripe: #2b313d;
+  --callout-note-bg: #88c0d01f;
+  --callout-note-border: #88c0d0;
+  --callout-tip-bg: #a3be8c1f;
+  --callout-tip-border: #a3be8c;
+  --callout-warning-bg: #ebcb8b1f;
+  --callout-warning-border: #ebcb8b;
+  --callout-danger-bg: #bf616a1f;
+  --callout-danger-border: #bf616a;
+}
+
+/* 5. OBSIDIAN OLED (Pitch black, maximal contrast) */
+.theme-obsidian {
+  --bg-app: #050505;
+  --bg-sidebar: #0a0a0a;
+  --bg-surface: #141414;
+  --bg-surface-subtle: #111111;
+  --bg-code: #121212;
+  --text-main: #f5f5f5;
+  --text-muted: #a3a3a3;
+  --border-color: #262626;
+  --accent-color: #a855f7;
+  --accent-hover: #c084fc;
+  --accent-surface: #9333ea26;
+  --table-border: #262626;
+  --table-stripe: #0d0d0d;
+  --callout-note-bg: #1e1b4b33;
+  --callout-note-border: #818cf8;
+  --callout-tip-bg: #064e3b33;
+  --callout-tip-border: #34d399;
+  --callout-warning-bg: #713f1233;
+  --callout-warning-border: #facc15;
+  --callout-danger-bg: #88133733;
+  --callout-danger-border: #fb7185;
+}
+
+/* Typography Enhancements from Modern Web Guidance */
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  text-wrap: balance;
+  scroll-margin-top: 5rem;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body li {
+  text-wrap: pretty;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 140, 140, 0.25);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 140, 140, 0.45);
+}

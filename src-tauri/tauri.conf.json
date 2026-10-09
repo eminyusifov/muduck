@@ -1,0 +1,71 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Muduck",
+  "version": "1.0.0",
+  "identifier": "com.muduck.reader",
+  "build": {
+    "devUrl": "http://localhost:5173",
+    "beforeDevCommand": "npm run build:renderer",
+    "beforeBuildCommand": "npm run build:renderer",
+    "frontendDist": "../dist/renderer",
+    "beforeBundleCommand": "bash scripts/build-quicklook.sh"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Muduck",
+        "width": 1200,
+        "height": 860,
+        "minWidth": 800,
+        "minHeight": 500,
+        "titleBarStyle": "Overlay",
+        "hiddenTitle": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self' ipc: http://ipc.localhost; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; font-src 'self' data:; connect-src ipc: http://ipc.localhost",
+      "devCsp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "app",
+      "nsis"
+    ],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.png",
+      "icons/icon.ico"
+    ],
+    "category": "Productivity",
+    "macOS": {
+      "minimumSystemVersion": "11.0",
+      "frameworks": [],
+      "files": {
+        "PlugIns/MuduckQuickLook.appex": "target/quicklook/MuduckQuickLook.appex"
+      },
+      "signingIdentity": "-"
+    },
+    "fileAssociations": [
+      {
+        "ext": [
+          "md",
+          "markdown",
+          "mdown",
+          "mkd"
+        ],
+        "name": "Markdown Document",
+        "role": "Editor"
+      }
+    ],
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser"
+      }
+    }
+  }
+}
