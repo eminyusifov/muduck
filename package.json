@@ -1,6 +1,6 @@
 {
   "name": "muduck",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The AI Document Reader & Editor for macOS and Windows",
   "scripts": {
     "dev": "vite",
